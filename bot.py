@@ -57,7 +57,7 @@ async def cmd_help(message: types.Message):
         '/unload - unload users and their balance',
         '/add_balance - add balance to a user account',
         '/block - block a user',
-        '/unblock - unblock a user'
+        '/unblock - unblock a user',
         '/buy - buy a product',
     ]
     await message.answer('\n'.join(commands))
