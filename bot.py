@@ -67,7 +67,6 @@ async def cmd_help(message: types.Message):
 async def cmd_start(message: types.Message):
     logger.info('запуск команды старт')
     username = message.from_user.username
-    chat_id = message.chat.id
 
     # Add the user to the database
     await add_to_database(username, 0)
@@ -103,7 +102,7 @@ async def update_balance(username: str, balance: int):
     conn.commit()
 
 # Command to unload users and their balance
-# Command to unload users and their balance
+
 
 @dp.message_handler(Command('unload'))
 async def cmd_unload_users(message: types.Message):
